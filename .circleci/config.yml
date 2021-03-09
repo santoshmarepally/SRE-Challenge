@@ -10,6 +10,7 @@ jobs:
       - run:
           name: terraform init & plan
           command: |
+            cd environments/dev/
             terraform init -input=false
             terraform plan -out=tfplan -input=false
       - persist_to_workspace:
@@ -26,6 +27,7 @@ jobs:
       - run:
           name: terraform
           command: |
+            cd environments/dev/
             terraform apply -auto-approve -input=false tfplan
       - persist_to_workspace:
           root: .

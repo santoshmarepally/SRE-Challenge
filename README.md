@@ -27,4 +27,20 @@ A complete solution should include:
 * Monitoring
 * SLI/SLO dashboard
 
-#updated
+
+
+# Solution
+
+
+## Architecture:
+
+![Optional Text](images/architecture.png)
+
+
+## CICD:
+![Optional Text](images/circleci.png)
+
+
+## Dashboard:
+![Optional Text](images/cloudwatch.png)
+

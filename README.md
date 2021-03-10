@@ -36,7 +36,7 @@ A complete solution should include:
 - Applicaiton is deployed on ECS Fargate, which will automatically scale between the set min and max capacity using the defined policy.
 - Logging is enabled on ECS Task.
 - CloudFront Distribution is created and WAF is enabled.
-- CloudWatch Alarm are created for CPU, Memory, ECT Task limit, and LB Target response time. A Dashboard is created with these alerts.
+- CloudWatch Alarm are created for CPU, Memory, ECS Task limit, and LB Target response time. A Dashboard is created with these alerts.
 - SNS Topic is set up to push notifications whenever and Alarm is triggered.
 
 

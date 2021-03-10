@@ -27,19 +27,38 @@ A complete solution should include:
 * Monitoring
 * SLI/SLO dashboard
 
-
+<p>&nbsp;</p> <p>&nbsp;</p>
+=====================================================================================
 
 # Solution
+
+- Infrastructure is developed using Terraform.
+- Applicaiton is deployed on ECS Fargate, which will automatically scale between the set min and max capacity using the defined policy.
+- Logging is enabled on ECS Task.
+- CloudFront Distribution is created and WAF is enabled.
+- CloudWatch Alarm are created for CPU, Memory, ECT Task limit, and LB Target response time. A Dashboard is created with these alerts.
+- SNS Topic is set up to push notifications whenever and Alarm is triggered.
+
+
+### Notes:
+- Route53 is not implemented. This requires purchasing a domain.
+- Certificates are not created as this requires a domain.
+- For the purpose of testing port 80 is used, which can be changed to 443 for secure transfer (HTTPS).
+- Load balancer Security group ingress is opened for all, which can be changed to certain IP for restricted access.
+
+<p>&nbsp;</p> <p>&nbsp;</p>
 
 
 ## Architecture:
 
 ![Optional Text](images/architecture.png)
 
+<p>&nbsp;</p> <p>&nbsp;</p>
 
 ## CICD:
 ![Optional Text](images/circleci.png)
 
+<p>&nbsp;</p> <p>&nbsp;</p>
 
 ## Dashboard:
 ![Optional Text](images/cloudwatch.png)
